@@ -1,9 +1,9 @@
 //import logo from './logo.svg';
 //import './App.css';
 import { Redirect, Route, Switch } from "react-router";
-import MenuAppBar from "./AppBar";
+import MenuAppBar from "./components/AppBar";
 import Home from "./Home";
-import ProductDetails from "./ProductDetails";
+import ProductDetails from "./components/ProductDetails";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

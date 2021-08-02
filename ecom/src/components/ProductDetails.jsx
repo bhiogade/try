@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
-import { findById } from "./data";
-import "./css/product-details.css";
+import { findById } from "../data";
+import "../css/product-details.css";
 import { Button } from "@material-ui/core";
 import { connect } from "react-redux";
 import ProductDescription from "./ProductDescription";

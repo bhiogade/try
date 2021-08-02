@@ -1,5 +1,5 @@
 import products from "./data";
-import ProductCard from "./ProductCard";
+import ProductCard from "./components/ProductCard";
 
 import { connect } from "react-redux";
 

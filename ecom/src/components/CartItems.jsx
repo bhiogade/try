@@ -12,9 +12,10 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import { connect } from "react-redux";
+
 import ProductDescription from "./ProductDescription";
 import { Divider } from "@material-ui/core";
-import "./css/cart-items.css";
+import "../css/cart-items.css";
 import { toast } from "react-toastify";
 
 const styles = (theme) => ({
@@ -32,7 +33,7 @@ const styles = (theme) => ({
 
 function CartItems(props) {
   function handleCheckout() {
-    toast.success("Order placed successfully!");
+    toast.success("Order successfully placed");
   }
   return (
     <div>

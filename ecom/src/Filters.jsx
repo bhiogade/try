@@ -1,6 +1,6 @@
 import { Paper, Typography } from "@material-ui/core";
-import CategoryFilter from "./CategoryFilter";
-import PriceFilter from "./PriceFilter";
+import CategoryFilter from "./components/CategoryFilter";
+import PriceFilter from "./components/PriceFilter";
 
 const Filters = () => {
     

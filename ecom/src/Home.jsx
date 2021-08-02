@@ -1,4 +1,4 @@
-import MenuAppBar from "./AppBar";
+//import MenuAppBar from "./components/AppBar";
 import Filters from "./Filters";
 import Products from "./Products";
 
