@@ -14,6 +14,10 @@ import Menu from "@material-ui/core/Menu";
 import SearchInput from "./SearchInput";
 import Cart from "./Cart";
 
+import { Link, useHistory } from "react-router-dom";
+import CartItems from "./CartItems";
+import { connect } from "react-redux";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -32,31 +36,39 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MenuAppBar() {
+
+  const history = useHistory();  
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
+
   const open = Boolean(anchorEl);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const navigateToHome = () => {
+      history.push('/home');
+  }
+
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <img
-            src="https://img.icons8.com/fluent/2x/favorite-cart.png"
-            alt="logo"
-            height={"50px"}
-            width={"50px"}
-          />
-          <Typography variant="h6" className={classes.title}>
-            eClick
-          </Typography>
+              src="https://img.icons8.com/fluent/2x/favorite-cart.png"
+              alt="logo"
+              height={"50px"}
+              width={"50px"}
+              onClick={navigateToHome}
+            />
+            <Typography variant="h6" className={classes.title}>
+              eClick
+            </Typography>
           <div className={classes.search}>
             <SearchInput />
           </div>
@@ -89,6 +101,7 @@ export default function MenuAppBar() {
               <MenuItem onClick={handleClose}>Profile</MenuItem>
               <MenuItem onClick={handleClose}>My account</MenuItem>
             </Menu>
+            <CartItems/>
           </div>
         </Toolbar>
       </AppBar>
